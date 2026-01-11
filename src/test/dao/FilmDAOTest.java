@@ -2,15 +2,15 @@ package test.dao;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import dao.FilmDAO;
+import strategy.dao.FilmDAO;
 import model.Film;
 import model.StatoVisione;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
 
-import dao.JsonFilmDAO;
-import dao.CsvFilmDAO;
+import strategy.dao.JsonFilmDAO;
+import strategy.dao.CsvFilmDAO;
 
 import java.io.File;
 import java.io.IOException;

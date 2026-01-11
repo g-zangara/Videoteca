@@ -74,10 +74,6 @@ src
 ├── controller
 │   ├── GestoreVideoteca.java
 │   └── FilmController.java
-├── dao
-│   ├── FilmDAO.java
-│   ├── JsonFilmDAO.java
-│   └── CsvFilmDAO.java
 ├── command
 │   ├── Command.java
 │   ├── CommandManager.java
@@ -85,6 +81,10 @@ src
 │   ├── ModificaFilmCommand.java
 │   └── EliminaFilmCommand.java
 ├── strategy
+│   │── dao
+│   │   ├── FilmDAO.java
+│   │   ├── JsonFilmDAO.java
+│   │   └── CsvFilmDAO.java
 │   ├── OrdinatoreFilmStrategy.java
 │   ├── OrdinaTitoloAZStrategy.java
 │   ├── OrdinaTitoloZAStrategy.java
@@ -95,7 +95,7 @@ src
 ├── test
 │   ├── command/
 │   ├── controller/
-│   ├── dao/
+│   ├── strategy.dao/
 │   ├── model/
 │   ├── strategy/
 │   └── RunAllTests.java

@@ -1,9 +1,9 @@
 package controller;
 
-import dao.CsvFilmDAO;
-import dao.FilmDAO;
+import strategy.dao.CsvFilmDAO;
+import strategy.dao.FilmDAO;
 import model.Film;
-import dao.JsonFilmDAO;
+import strategy.dao.JsonFilmDAO;
 import strategy.OrdinatoreFilmStrategy;
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package dao;
+package strategy.dao;
 
 import model.Film;
 
