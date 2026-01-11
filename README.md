@@ -2,7 +2,9 @@
 
 ## 📚 Descrizione del Progetto
 
-**Gestore di Videoteca Personale** è un'applicazione Java sviluppata per aiutare gli utenti a gestire una collezione personale di films. Utilizza Java 17 in versione "vanilla" e Swing per l'interfaccia grafica. Il progetto implementa numerosi design pattern per garantire una struttura solida, estendibile e manutenibile.
+**Gestore di Videoteca Personale** è un'applicazione Java sviluppata per aiutare gli utenti a gestire una collezione
+personale di films. Utilizza Java 17 in versione "vanilla" e Swing per l'interfaccia grafica. Il progetto implementa
+numerosi design pattern per garantire una struttura solida, estendibile e manutenibile.
 
 ## 🎯 Obiettivi
 
@@ -30,7 +32,8 @@ Il progetto segue il pattern **MVC (Model-View-Controller)** e fa uso dei seguen
 ### 📖 Gestione Films
 
 * Aggiunta, modifica e rimozione di un film
-* Attributi: titolo, regista, anno di uscita, genere, valutazione (1-5 stelle), stato di visione (Visto, Da vedere, In visione)
+* Attributi: titolo, regista, anno di uscita, genere, valutazione (1-5 stelle), stato di visione (Visto, Da vedere, In
+  visione)
 * Validazione dei dati in input
 
 ### 🔎 Ricerca, Filtri e Ordinamento
@@ -125,8 +128,8 @@ cd Videoteca
 
 ### 3. Aggiungi JUnit 5 al progetto - Su IntelliJ IDEA
 
-Per usare JUnit in un progetto Java vanilla su IntelliJ IDEA, **non serve installare un plugin separato**: JUnit è già supportato nativamente da IntelliJ. Devi solo aggiungere la libreria JUnit al tuo progetto.
-
+Per usare JUnit in un progetto Java vanilla su IntelliJ IDEA, **non serve installare un plugin separato**: JUnit è già
+supportato nativamente da IntelliJ. Devi solo aggiungere la libreria JUnit al tuo progetto.
 
 Se **non** stai usando Maven o Gradle (Java vanilla):
 
@@ -173,4 +176,5 @@ Questo progetto è distribuito sotto licenza **MIT**. Sentiti libero di utilizza
 
 ## 👤 Autori
 
-Progetto sviluppato a scopo didattico come esercitazione di progettazione software in Java. Include best practice OOP, uso avanzato di Swing e design pattern.
+Progetto sviluppato a scopo didattico come esercitazione di progettazione software in Java. Include best practice OOP,
+uso avanzato di Swing e design pattern.

@@ -1,21 +1,20 @@
 package test.dao;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import strategy.dao.FilmDAO;
 import model.Film;
 import model.StatoVisione;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
-
-import strategy.dao.JsonFilmDAO;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import strategy.dao.CsvFilmDAO;
+import strategy.dao.FilmDAO;
+import strategy.dao.JsonFilmDAO;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test unitari per le implementazioni di FilmDAO.
@@ -45,7 +44,7 @@ public class FilmDAOTest {
         // Crea una lista di films di test
         filmsTest = new ArrayList<>();
         filmsTest.add(new Film("Il Padrino", "Francis Ford Coppola", "1972", "dramma", 5, StatoVisione.VISTO));
-        filmsTest.add( new Film("Interstellar", "Christopher Nolan", "2014", "fantascienza", 3, StatoVisione.DA_VEDERE));
+        filmsTest.add(new Film("Interstellar", "Christopher Nolan", "2014", "fantascienza", 3, StatoVisione.DA_VEDERE));
         filmsTest.add(new Film("The Social Network", "David Fincher", "2010", "biografico", 0, StatoVisione.IN_VISIONE));
     }
 

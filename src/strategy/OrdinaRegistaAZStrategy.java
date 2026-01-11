@@ -10,10 +10,10 @@ import java.util.List;
  * Implementa l'interfaccia OrdinatoreFilmStrategy utilizzando il Comparator.
  */
 public class OrdinaRegistaAZStrategy implements OrdinatoreFilmStrategy {
-    
+
     /**
      * Ordina una lista di films per regista in ordine alfabetico (A-Z).
-     * 
+     *
      * @param films Lista di films da ordinare
      */
     @Override

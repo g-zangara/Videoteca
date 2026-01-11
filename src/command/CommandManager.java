@@ -28,7 +28,7 @@ public class CommandManager {
      */
     public boolean executeCommand(Command command) {
         boolean result = command.execute();
-        if(result){
+        if (result) {
             undoStack.push(command);
             redoStack.clear();
             return true;

@@ -1,17 +1,17 @@
 package test.controller;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import controller.GestoreVideoteca;
 import model.Film;
 import model.StatoVisione;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import strategy.*;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test unitari per la classe GestoreVideoteca.
@@ -84,11 +84,11 @@ public class GestoreVideotecaTest {
         // Verifica che i dati siano stati aggiornati
         List<Film> films = gestore.getFilms();
         Film filmAggiornato = films.stream()
-            .filter(film -> film.getAnnoUscita().equals(film1.getAnnoUscita()) &&
-                            film.getTitolo().equals(film1.getTitolo()) &&
-                            film.getRegista().equals(film1.getRegista()))
-            .findFirst()
-            .orElse(null);
+                .filter(film -> film.getAnnoUscita().equals(film1.getAnnoUscita()) &&
+                        film.getTitolo().equals(film1.getTitolo()) &&
+                        film.getRegista().equals(film1.getRegista()))
+                .findFirst()
+                .orElse(null);
 
         assertNotNull(filmAggiornato, "Il film modificato dovrebbe essere presente nella videoteca");
         assertEquals("Genere Modificato", filmAggiornato.getGenere());

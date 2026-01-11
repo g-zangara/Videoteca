@@ -1,6 +1,7 @@
 package strategy;
 
 import model.Film;
+
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,10 +10,10 @@ import java.util.List;
  * Implementa l'interfaccia OrdinatoreFilmStrategy utilizzando il Comparator.
  */
 public class OrdinaValutazioneAscStrategy implements OrdinatoreFilmStrategy {
-    
+
     /**
      * Ordina una lista di films per valutazione in ordine crescente (da 1 a 5).
-     * 
+     *
      * @param films Lista di films da ordinare
      */
     @Override

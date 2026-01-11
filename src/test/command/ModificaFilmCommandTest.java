@@ -1,13 +1,13 @@
 package test.command;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import command.ModificaFilmCommand;
-import model.StatoVisione;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
 import controller.FilmController;
 import model.Film;
+import model.StatoVisione;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test unitari per la classe ModificaFilmCommand.

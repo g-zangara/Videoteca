@@ -1,9 +1,9 @@
 package test.model;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import model.StatoVisione;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test unitari per l'enumerazione StatoVisione.

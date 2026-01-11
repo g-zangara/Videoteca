@@ -289,8 +289,8 @@ public class VideotecaView extends JFrame {
     /**
      * Aggiorna lo stato dei pulsanti Undo e Redo in base alla disponibilità delle operazioni.
      *
-     * @param canUndo true se l'operazione di undo è disponibile
-     * @param canRedo true se l'operazione di redo è disponibile
+     * @param canUndo         true se l'operazione di undo è disponibile
+     * @param canRedo         true se l'operazione di redo è disponibile
      * @param undoDescription descrizione dell'operazione di undo
      * @param redoDescription descrizione dell'operazione di redo
      */
@@ -479,7 +479,7 @@ public class VideotecaView extends JFrame {
             int valutazione = dialog.getValutazione();
             StatoVisione statoVisione = dialog.getStatoVisione();
 
-            try{
+            try {
                 boolean successo = controller.modificaFilm(filmSelezionato, titolo, regista, annoUscita, genere, valutazione, statoVisione);
 
                 if (successo) {
@@ -489,7 +489,7 @@ public class VideotecaView extends JFrame {
                     JOptionPane.showMessageDialog(this, "Impossibile modificare il film, verifica che non sia già presente.",
                             "Errore", JOptionPane.ERROR_MESSAGE);
                 }
-            }catch (IllegalArgumentException iae){
+            } catch (IllegalArgumentException iae) {
                 String[] parts = iae.getMessage().split(" - ", 2);
                 switch (parts[0]) {
                     case "1":
@@ -623,7 +623,7 @@ public class VideotecaView extends JFrame {
             }
 
             Status esito = controller.salvaVideoteca(percorso, formato);
-            if(esito.isSuccess())
+            if (esito.isSuccess())
                 JOptionPane.showMessageDialog(this, esito.getMessage(),
                         "Salvataggio completato", JOptionPane.INFORMATION_MESSAGE);
             else
@@ -652,7 +652,7 @@ public class VideotecaView extends JFrame {
         if (risultato == JFileChooser.APPROVE_OPTION) {
             File fileSelezionato = fileChooser.getSelectedFile();
             Status esito = controller.caricaVideoteca(fileSelezionato.getAbsolutePath(), formato);
-            if(esito.isSuccess())
+            if (esito.isSuccess())
                 JOptionPane.showMessageDialog(this, esito.getMessage(),
                         "Caricamento completato", JOptionPane.INFORMATION_MESSAGE);
             else
@@ -723,7 +723,7 @@ public class VideotecaView extends JFrame {
      *
      * @return Anno di uscita selezionato o "Tutti" se nessuno è selezionato
      */
-    public String getAnnoUscitaSelezionato(){
+    public String getAnnoUscitaSelezionato() {
         return (String) comboAnnoUscita.getSelectedItem();
     }
 

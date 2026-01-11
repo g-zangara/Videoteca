@@ -1,14 +1,14 @@
 package test;
 
+import test.command.AggiungiFilmCommandTest;
+import test.command.CommandManagerTest;
+import test.command.EliminaFilmCommandTest;
+import test.command.ModificaFilmCommandTest;
 import test.controller.GestoreVideotecaTest;
+import test.dao.FilmDAOTest;
 import test.model.FilmTest;
 import test.model.StatoVisioneTest;
-import test.command.CommandManagerTest;
-import test.command.AggiungiFilmCommandTest;
-import test.command.ModificaFilmCommandTest;
-import test.command.EliminaFilmCommandTest;
 import test.strategy.OrdinatoreFilmStrategyTest;
-import test.dao.FilmDAOTest;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

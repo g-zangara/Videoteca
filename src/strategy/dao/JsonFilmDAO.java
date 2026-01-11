@@ -16,7 +16,7 @@ public class JsonFilmDAO implements FilmDAO {
     /**
      * Salva una lista di films in formato JSON.
      *
-     * @param films Lista di films da salvare
+     * @param films        Lista di films da salvare
      * @param percorsoFile Percorso del file JSON in cui salvare i dati
      * @throws IOException In caso di errori durante la scrittura del file
      */
@@ -109,11 +109,11 @@ public class JsonFilmDAO implements FilmDAO {
                                 "): dati incompleti o non validi");
                     } else {
                         // Film valido, verifica duplicati
-                        if(films.contains(film)){
+                        if (films.contains(film)) {
                             errori.add("Film #" + indice + " (" +
                                     (film.getTitolo().isEmpty() ? "titolo mancante" : film.getTitolo()) +
                                     "): film già presente");
-                        }else{
+                        } else {
                             films.add(film);
                         }
                     }

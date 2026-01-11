@@ -8,7 +8,6 @@ public class Videoteca {
 
     /**
      * Metodo principale che avvia l'applicazione.
-     *
      */
     public static void main(String[] args) {
         // Utilizza SwingUtilities.invokeLater per garantire che l'interfaccia utente

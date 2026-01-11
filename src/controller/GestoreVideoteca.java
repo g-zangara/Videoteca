@@ -1,10 +1,10 @@
 package controller;
 
+import model.Film;
+import strategy.OrdinatoreFilmStrategy;
 import strategy.dao.CsvFilmDAO;
 import strategy.dao.FilmDAO;
-import model.Film;
 import strategy.dao.JsonFilmDAO;
-import strategy.OrdinatoreFilmStrategy;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -65,20 +65,20 @@ public class GestoreVideoteca {
      * Modifica un film esistente nella collezione.
      *
      * @param vecchioFilm Film da modificare
-     * @param nuovoFilm Film con i nuovi dati
+     * @param nuovoFilm   Film con i nuovi dati
      * @return true se l'operazione è andata a buon fine, false altrimenti
      */
     public boolean modificaFilm(Film vecchioFilm, Film nuovoFilm) {
-        if(films.contains(nuovoFilm)) {
+        if (films.contains(nuovoFilm)) {
             //recupero il film già presente
             Film filmPresente = films.get(films.indexOf(nuovoFilm));
-            if(!filmPresente.equals(vecchioFilm)) {
+            if (!filmPresente.equals(vecchioFilm)) {
                 throw new IllegalArgumentException("1 - Stai cercando di modificare un film in un altro già esistente.");
             }
             //posso solo modificare genere, valutazione e stato visione
-            if(nuovoFilm.getGenere().equalsIgnoreCase(vecchioFilm.getGenere()) &&
-               nuovoFilm.getValutazione() == vecchioFilm.getValutazione() &&
-               nuovoFilm.getStatoVisione() == vecchioFilm.getStatoVisione()) {
+            if (nuovoFilm.getGenere().equalsIgnoreCase(vecchioFilm.getGenere()) &&
+                    nuovoFilm.getValutazione() == vecchioFilm.getValutazione() &&
+                    nuovoFilm.getStatoVisione() == vecchioFilm.getStatoVisione()) {
                 throw new IllegalArgumentException("2 - Non sono stati apportati cambiamenti al film.");
             }
         }
@@ -147,7 +147,7 @@ public class GestoreVideoteca {
      * Ordina i films secondo la strategia specificata.
      *
      * @param filmsDaOrdinare Lista di films da ordinare
-     * @param strategy Strategia di ordinamento da applicare
+     * @param strategy        Strategia di ordinamento da applicare
      * @return Lista ordinata di films
      */
     public List<Film> ordinaFilms(List<Film> filmsDaOrdinare, OrdinatoreFilmStrategy strategy) {

@@ -26,7 +26,7 @@ public class DialogAggiungiModificaFilm extends JDialog {
      * Costruttore per la finestra di dialogo.
      *
      * @param parent Frame genitore
-     * @param film Film da modificare, o null se si sta aggiungendo un nuovo film
+     * @param film   Film da modificare, o null se si sta aggiungendo un nuovo film
      */
     public DialogAggiungiModificaFilm(JFrame parent, Film film) {
         super(parent, film == null ? "Aggiungi Film" : "Modifica Film", true);

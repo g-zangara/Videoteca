@@ -1,6 +1,7 @@
 package strategy;
 
 import model.Film;
+
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,10 +10,10 @@ import java.util.List;
  * Implementa l'interfaccia OrdinatoreFilmStrategy utilizzando il Comparator.
  */
 public class OrdinaTitoloAZStrategy implements OrdinatoreFilmStrategy {
-    
+
     /**
      * Ordina una lista di films per titolo in ordine alfabetico (A-Z).
-     * 
+     *
      * @param films Lista di films da ordinare
      */
     @Override

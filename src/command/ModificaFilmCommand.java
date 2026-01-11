@@ -23,13 +23,13 @@ public class ModificaFilmCommand implements Command {
     /**
      * Costruttore che inizializza il comando con i dati del film da modificare.
      *
-     * @param controller Controller della videoteca
-     * @param filmOriginale Film originale da modificare
-     * @param nuovoTitolo Nuovo titolo
-     * @param nuovoRegista Nuovo regista
-     * @param nuovoAnnoUscita Nuovo anno di uscita
-     * @param nuovoGenere Nuovo genere
-     * @param nuovaValutazione Nuova valutazione
+     * @param controller        Controller della videoteca
+     * @param filmOriginale     Film originale da modificare
+     * @param nuovoTitolo       Nuovo titolo
+     * @param nuovoRegista      Nuovo regista
+     * @param nuovoAnnoUscita   Nuovo anno di uscita
+     * @param nuovoGenere       Nuovo genere
+     * @param nuovaValutazione  Nuova valutazione
      * @param nuovoStatoVisione Nuovo stato visione
      */
     public ModificaFilmCommand(FilmController controller, Film filmOriginale,

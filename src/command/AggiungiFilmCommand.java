@@ -22,12 +22,12 @@ public class AggiungiFilmCommand implements Command {
     /**
      * Costruttore che inizializza il comando con i dati del film da aggiungere.
      *
-     * @param controller Controller della videoteca
-     * @param titolo Titolo del film
-     * @param regista Regista del film
-     * @param annoUscita Anno di uscita del film
-     * @param genere Genere del film
-     * @param valutazione Valutazione del film
+     * @param controller   Controller della videoteca
+     * @param titolo       Titolo del film
+     * @param regista      Regista del film
+     * @param annoUscita   Anno di uscita del film
+     * @param genere       Genere del film
+     * @param valutazione  Valutazione del film
      * @param statoVisione Stato visione del film
      */
     public AggiungiFilmCommand(FilmController controller, String titolo, String regista,

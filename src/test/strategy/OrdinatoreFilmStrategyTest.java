@@ -1,14 +1,16 @@
 package test.strategy;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import model.Film;
 import model.StatoVisione;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import strategy.*;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Test unitari per le classi che implementano OrdinatoreFilmStrategy.

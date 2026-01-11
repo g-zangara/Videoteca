@@ -1,15 +1,15 @@
 package controller;
 
+import command.*;
 import model.Film;
 import model.StatoVisione;
 import model.Status;
-import view.VideotecaView;
 import strategy.*;
-import command.*;
+import view.VideotecaView;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -37,11 +37,11 @@ public class FilmController {
      * Aggiunge un nuovo film alla videoteca usando il pattern Command.
      * Questo metodo è chiamato dalla vista e crea un comando AggiungiFilm.
      *
-     * @param titolo Titolo del film
-     * @param regista Regista del film
-     * @param annoUscita Anno di uscita del film
-     * @param genere Genere del film
-     * @param valutazione Valutazione del film
+     * @param titolo       Titolo del film
+     * @param regista      Regista del film
+     * @param annoUscita   Anno di uscita del film
+     * @param genere       Genere del film
+     * @param valutazione  Valutazione del film
      * @param statoVisione Stato visione del film
      * @return true se l'inserimento è avvenuto con successo, false altrimenti
      */
@@ -50,7 +50,7 @@ public class FilmController {
         Command comando = new AggiungiFilmCommand(this, titolo, regista, annoUscita, genere,
                 valutazione, statoVisione);
         boolean result = commandManager.executeCommand(comando);
-        if(result)
+        if (result)
             aggiornaStatoPulsanti();
         return result;
     }
@@ -75,12 +75,12 @@ public class FilmController {
      * Questo metodo è chiamato dalla vista e crea un comando ModificaFilm.
      *
      * @param filmSelezionato Film da modificare
-     * @param titolo Nuovo titolo
-     * @param regista Nuovo regista
-     * @param annoUscita Nuovo anno di uscita
-     * @param genere Nuovo genere
-     * @param valutazione Nuova valutazione
-     * @param statoVisione Nuovo stato visione
+     * @param titolo          Nuovo titolo
+     * @param regista         Nuovo regista
+     * @param annoUscita      Nuovo anno di uscita
+     * @param genere          Nuovo genere
+     * @param valutazione     Nuova valutazione
+     * @param statoVisione    Nuovo stato visione
      * @return true se la modifica è avvenuta con successo, false altrimenti
      */
     public boolean modificaFilm(Film filmSelezionato, String titolo, String regista, String annoUscita,
@@ -92,7 +92,7 @@ public class FilmController {
         Command comando = new ModificaFilmCommand(this, filmSelezionato, titolo, regista, annoUscita,
                 genere, valutazione, statoVisione);
         boolean result = commandManager.executeCommand(comando);
-        if(result)
+        if (result)
             aggiornaStatoPulsanti();
         return result;
     }
@@ -102,7 +102,7 @@ public class FilmController {
      * Questo metodo è chiamato dal comando ModificaFilmCommand.
      *
      * @param vecchioFilm Film da modificare
-     * @param nuovoFilm Film con i nuovi dati
+     * @param nuovoFilm   Film con i nuovi dati
      * @return true se l'operazione è andata a buon fine, false altrimenti
      */
     public boolean modificaFilmInterno(Film vecchioFilm, Film nuovoFilm) {
@@ -229,7 +229,7 @@ public class FilmController {
      * Cerca films in base ai criteri di ricerca specificati.
      *
      * @param testoCerca Testo di ricerca
-     * @param tipoCerca Tipo di ricerca (titolo, regista)
+     * @param tipoCerca  Tipo di ricerca (titolo, regista)
      */
     private List<Film> cercaFilms(String testoCerca, String tipoCerca) {
         List<Film> risultato;
@@ -394,7 +394,7 @@ public class FilmController {
      * Salva la videoteca nel formato specificato.
      *
      * @param percorsoFile Percorso del file
-     * @param formato Formato del file (JSON o CSV)
+     * @param formato      Formato del file (JSON o CSV)
      */
     public Status salvaVideoteca(String percorsoFile, String formato) {
         try {
@@ -413,8 +413,7 @@ public class FilmController {
      * Carica la videoteca dal formato specificato.
      *
      * @param percorsoFile Percorso del file
-     * @param formato Formato del file (JSON o CSV)
-     *
+     * @param formato      Formato del file (JSON o CSV)
      * @return Status con esito e messaggio
      */
     public Status caricaVideoteca(String percorsoFile, String formato) {
@@ -423,7 +422,7 @@ public class FilmController {
                 gestoreVideoteca.caricaFilmsDaJson(percorsoFile);
             } else if ("CSV".equalsIgnoreCase(formato)) {
                 gestoreVideoteca.caricaFilmsDaCsv(percorsoFile);
-            }else {
+            } else {
                 //IN TEORIA QUI NON DOVREBBE MAI ARRIVARCI
                 System.err.println("Formato non supportato: " + formato);
                 return new Status(false, "Formato non supportato: " + formato);

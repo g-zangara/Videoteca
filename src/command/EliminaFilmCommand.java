@@ -16,7 +16,7 @@ public class EliminaFilmCommand implements Command {
      * Costruttore che inizializza il comando con il film da eliminare.
      *
      * @param controller Controller della videoteca
-     * @param film Film da eliminare
+     * @param film       Film da eliminare
      */
     public EliminaFilmCommand(FilmController controller, Film film) {
         this.controller = controller;
